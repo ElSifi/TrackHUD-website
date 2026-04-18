@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackHUD - Your Driving Music Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>TrackHUD</h1>
+        <p>Your ultimate companion for tracking drives and Apple Music stats seamlessly.</p>
+    </header>
+
+    <main>
+        <section>
+            <div class="screenshots">
+                <img src="assets/01_home_6p5.png" alt="TrackHUD Home page">
+                <img src="assets/02_trips_6p5.png" alt="TrackHUD Trips">
+                <img src="assets/03_insights_6p5.png" alt="TrackHUD Insights">
+                <img src="assets/04_settings_6p5.png" alt="TrackHUD Settings">
+            </div>
+        </section>
+
+        <section class="support-section">
+            <h2>Need Support?</h2>
+            <p>If you have any questions or are running into issues, reach out to us!</p>
+            <p id="support-email">Loading contact info...</p>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="privacy.html">Privacy Policy</a>
+        </nav>
+    </footer>
+
+    <script>
+        // Obfuscate email to prevent spam bots from easily parsing it
+        document.addEventListener("DOMContentLoaded", () => {
+            const user = "mo";
+            const domain = "elsifi.com";
+            const emailContainer = document.getElementById("support-email");
+            
+            const link = document.createElement("a");
+            link.href = `mailto:${user}@${domain}`;
+            link.textContent = `Email: ${user}@${domain}`;
+            
+            emailContainer.innerHTML = "";
+            emailContainer.appendChild(link);
+        });
+    </script>
+</body>
+</html>
